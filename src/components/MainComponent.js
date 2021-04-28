@@ -10,8 +10,12 @@ const Main = () => {
     const URL = "http://localhost:5000/diaries";
     useFetch(setDiaryList, URL);
 
-    const deleteDiary = (id) => {
-
+    const deleteDiary = async (id) => {
+        const DELETE_URL = `http://localhost:5000/diaries/${id}`;
+        await fetch(DELETE_URL, {
+            method: "DELETE"
+        });
+        setDiaryList(diaryList.filter((diary) => parseInt(id) !== parseInt(diary.id)));
     }
 
     return (
@@ -20,7 +24,7 @@ const Main = () => {
             <Switch>
                 <Route exact path="/home" component={Home}/>
                 <Route exact path="/add" component={() => <h1>Add Diary</h1>}/>
-                <Route exact path="/diaries" component={() => <DiaryList diaryList={diaryList} onDelete={deleteDiary} /> }/>
+                <Route exact path="/diaries" component={() => <DiaryList diaryList={diaryList} deleteDiary={deleteDiary} /> }/>
                 <Route exact path="/diary/:id" component={() => "Diary Details"}/>
                 <Redirect to="/home" />
             </Switch>

@@ -1,7 +1,6 @@
-import {Link, useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-const DiaryList = ({diaryList}) => {
-    const {id} = useParams();
+const DiaryList = ({diaryList, deleteDiary}) => {
 
     const RenderList = ({diary}) => {
         return (
@@ -15,9 +14,7 @@ const DiaryList = ({diaryList}) => {
                     <button>
                         <Link to={`/diary/${diary.id}`}>View</Link>
                     </button>
-                    <button>
-                        <Link to={`/diary/${diary.id}/delete`}>Delete</Link>
-                    </button>
+                    <button onClick={() => deleteDiary(diary.id)}>Delete</button>
                 </div>
             </div>
         );
