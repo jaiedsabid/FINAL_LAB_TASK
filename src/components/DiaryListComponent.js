@@ -9,7 +9,6 @@ const DiaryList = ({diaryList, deleteDiary}) => {
                 <p>Diary ID: {diary.id}</p>
                 <p>User ID: {diary.userId}</p>
                 <p>Event: {diary.event}</p>
-                <p>Note: {diary.note}</p>
                 <div className="btn">
                     <button>
                         <Link to={`/diary/${diary.id}`}>View</Link>
