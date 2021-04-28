@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "event": "First Day",
+      "note": "Happy Days",
+      "last-modification": "12-12-2021"
+    },
+    {
+      "id": 1,
+      "event": "json-server",
+      "experience": "json-server",
+      "thought": "json-server",
+      "last-modification": "json-server"
+    }
+]
