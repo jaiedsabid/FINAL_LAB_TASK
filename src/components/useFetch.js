@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 
-const useFetch = (setDiaryList, URL) => {
+const useFetch = (setDiaryList, URL, updateStatus) => {
     const getDiaries = async () => {
         const data = await fetch(URL);
         const jsonData = await data.json();
@@ -9,7 +9,7 @@ const useFetch = (setDiaryList, URL) => {
 
     useEffect(() => {
         getDiaries();
-    }, []);
+    }, [updateStatus]);
 };
 
 export default useFetch;

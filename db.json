@@ -2,10 +2,10 @@
   "diaries": [
     {
       "id": 1,
-      "userId": 1,
-      "event": "2nd Day",
-      "note": "Happy Days",
-      "last_updated": "2021-12-13"
+      "userId": "2",
+      "event": "2nd Day of Jaied",
+      "note": "It was a great day.",
+      "last_updated": "2021-04-28"
     },
     {
       "id": 2,
@@ -32,6 +32,20 @@
       "id": "316",
       "userId": "1",
       "event": "Hello Friends",
+      "note": "Hola Amigos!",
+      "last_updated": "2021-04-28"
+    },
+    {
+      "id": "894",
+      "userId": "1",
+      "event": "Hello Friends 2",
+      "note": "Hola Amigos!",
+      "last_updated": "2021-04-28"
+    },
+    {
+      "id": "909",
+      "userId": "1",
+      "event": "Hello Friends 3",
       "note": "Hola Amigos!",
       "last_updated": "2021-04-28"
     }

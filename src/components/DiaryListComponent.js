@@ -14,6 +14,9 @@ const DiaryList = ({diaryList, deleteDiary}) => {
                         <Link to={`/diary/${diary.id}`}>View</Link>
                     </button>
                     <button onClick={() => deleteDiary(diary.id)}>Delete</button>
+                    <button>
+                        <Link to={`/diary/${diary.id}/update`}>Update</Link>
+                    </button>
                 </div>
             </div>
         );
